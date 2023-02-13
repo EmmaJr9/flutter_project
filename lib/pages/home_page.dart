@@ -82,62 +82,59 @@ class _HomePageState extends State<HomePage> {
         data: Theme.of(context).copyWith(
           canvasColor: const Color.fromRGBO(31, 77, 76, 1),
         ),
-        child: SizedBox(
-          height: 70,
-          child: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            fixedColor: const Color.fromRGBO(194, 135, 111, 1),
-            showSelectedLabels: true,
-            showUnselectedLabels: true,
-            unselectedItemColor: const Color.fromRGBO(98, 126, 126, 1),
-            selectedFontSize: 13,
-            unselectedFontSize: 13,
-            selectedLabelStyle: const TextStyle(height: 1.5),
-            unselectedLabelStyle: const TextStyle(height: 1.5),
-            items: const [
-              BottomNavigationBarItem(
-                label: 'Home',
-                icon: Icon(
-                  Icons.home_outlined,
-                  size: 25,
-                ),
+        child: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          fixedColor: const Color.fromRGBO(194, 135, 111, 1),
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
+          unselectedItemColor: const Color.fromRGBO(98, 126, 126, 1),
+          selectedFontSize: 13,
+          unselectedFontSize: 13,
+          selectedLabelStyle: const TextStyle(height: 1.5),
+          unselectedLabelStyle: const TextStyle(height: 1.5),
+          items: const [
+            BottomNavigationBarItem(
+              label: 'Home',
+              icon: Icon(
+                Icons.home_outlined,
+                size: 25,
               ),
-              BottomNavigationBarItem(
-                label: 'Payments',
-                icon: Icon(
-                  Icons.payment_rounded,
-                  size: 25,
-                ),
+            ),
+            BottomNavigationBarItem(
+              label: 'Payments',
+              icon: Icon(
+                Icons.payment_rounded,
+                size: 25,
               ),
-              BottomNavigationBarItem(
-                label: 'Dialogs',
-                icon: Icon(
-                  Icons.message_rounded,
-                  size: 25,
-                ),
+            ),
+            BottomNavigationBarItem(
+              label: 'Dialogs',
+              icon: Icon(
+                Icons.message_rounded,
+                size: 25,
               ),
-              BottomNavigationBarItem(
-                label: 'Services',
-                icon: Icon(
-                  Icons.supervisor_account_rounded,
-                  size: 25,
-                ),
+            ),
+            BottomNavigationBarItem(
+              label: 'Services',
+              icon: Icon(
+                Icons.supervisor_account_rounded,
+                size: 25,
               ),
-              BottomNavigationBarItem(
-                label: 'ATMs',
-                icon: Icon(
-                  Icons.location_on_outlined,
-                  size: 25,
-                ),
+            ),
+            BottomNavigationBarItem(
+              label: 'ATMs',
+              icon: Icon(
+                Icons.location_on_outlined,
+                size: 25,
               ),
-            ],
-            currentIndex: currentindex,
-            onTap: (int index) {
-              setState(() {
-                currentindex = index;
-              });
-            },
-          ),
+            ),
+          ],
+          currentIndex: currentindex,
+          onTap: (int index) {
+            setState(() {
+              currentindex = index;
+            });
+          },
         ),
       ),
     );

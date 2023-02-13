@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stock_wallet/pages/sign_in.dart';
@@ -43,6 +45,7 @@ class _LoadPageState extends State<LoadPage> {
       body: FutureBuilder(
         future: _initializeFirebase(),
         builder: (context, snapshot) {
+          log('Instance of firebase app ${snapshot.data}');
           if (snapshot.connectionState == ConnectionState.done) {
             return const SignIn();
           }

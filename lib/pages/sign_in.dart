@@ -12,17 +12,20 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
   // Login function
-  static Future<User?> loginUsingEmailPassword(
-      {required String email,
-      required String password,
-      required BuildContext context}) async {
+  static Future<User?> loginUsingEmailPassword({
+    required String email,
+    required String password,
+  }) async {
     FirebaseAuth auth = FirebaseAuth.instance;
     User? user;
     try {
       UserCredential userCredential = await auth.signInWithEmailAndPassword(
-          email: email, password: password);
+        email: email,
+        password: password,
+      );
       user = userCredential.user;
     } on FirebaseAuthException catch (e) {
+      print(e);
       if (e.code == "user not found") {
         print("No user found for that email");
       }
@@ -38,17 +41,15 @@ class _SignInState extends State<SignIn> {
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
 
-    return Material(
-      child: Container(
-        decoration: const BoxDecoration(
-          color: Colors.white,
-        ),
+    return Scaffold(
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(30.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              const SizedBox(height: 100),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -174,11 +175,10 @@ class _SignInState extends State<SignIn> {
                         activeColor: Colors.white,
                         value: isChecked,
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(6)),
+                          borderRadius: BorderRadius.circular(6),
+                        ),
                         onChanged: (bool? value) {
-                          setState(() {
-                            isChecked = value!;
-                          });
+                          setState(() => isChecked = value!);
                         },
                       ),
                       const Text(
@@ -216,9 +216,9 @@ class _SignInState extends State<SignIn> {
                 child: ElevatedButton(
                   onPressed: () async {
                     User? user = await loginUsingEmailPassword(
-                        email: emailController.text,
-                        password: passwordController.text,
-                        context: context);
+                      email: emailController.text.trim(),
+                      password: passwordController.text.trim(),
+                    );
                     print(user);
                     if (user != null) {
                       // ignore: use_build_context_synchronously
