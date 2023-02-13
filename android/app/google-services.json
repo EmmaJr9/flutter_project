@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "878180674841",
+    "project_id": "flutter-stock-wallet",
+    "storage_bucket": "flutter-stock-wallet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878180674841:android:0aed9a246f4e2dc583e988",
+        "android_client_info": {
+          "package_name": "com.example.flutter_stock_wallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878180674841-5de6onf1pvkpk44fbcfn7ivp2s42ltd2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaA2akDek5k1ukf5Yb8zGJ1Q2o7PS4TSE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878180674841-5de6onf1pvkpk44fbcfn7ivp2s42ltd2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
