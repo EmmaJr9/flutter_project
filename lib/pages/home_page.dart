@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
-                      'lib/icons/avatar-3.png',
+                      'lib/icons/avatar/avatar-1.png',
                       height: 40,
                     ),
                   ),
@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       const SizedBox(width: 3),
                       const Text(
-                        '0.9028',
+                        '41.0010',
                         style: TextStyle(
                           color: Color.fromRGBO(187, 204, 204, 1),
                           fontSize: 12,
