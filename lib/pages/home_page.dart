@@ -88,8 +88,8 @@ class _HomePageState extends State<HomePage> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
-                      'lib/icons/manuel.jpg',
-                      height: 40,
+                      'lib/icons/avatar/avatar-3.png',
+                      height: 45,
                     ),
                   ),
                   const SizedBox(width: 7),
