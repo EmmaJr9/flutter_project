@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 12),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -123,6 +123,7 @@ class _HomePageState extends State<HomePage> {
                         height: 12,
                         color: const Color.fromRGBO(187, 204, 204, 1),
                       ),
+                      const SizedBox(width: 3),
                       const Text(
                         '0.9028',
                         style: TextStyle(
@@ -148,6 +149,7 @@ class _HomePageState extends State<HomePage> {
                         height: 12,
                         color: const Color.fromRGBO(187, 204, 204, 1),
                       ),
+                      const SizedBox(width: 3),
                       const Text(
                         '0.9028',
                         style: TextStyle(
@@ -164,7 +166,15 @@ class _HomePageState extends State<HomePage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('Wallet'),
+                  const Text(
+                    'Wallet',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(height: 15),
                   Row(
                     children: const [],
                   ),
