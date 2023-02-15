@@ -79,14 +79,14 @@ class _HomePageState extends State<HomePage> {
                   const Text(
                     'Hello',
                     style: TextStyle(
-                      color: Color.fromRGBO(77, 117, 117, 100),
-                      fontSize: 22,
+                      color: Color.fromRGBO(187, 204, 204, 0.7),
+                      fontSize: 25,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
                   const SizedBox(width: 7),
                   ClipRRect(
-                    borderRadius: BorderRadiusDirectional.circular(20),
+                    borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
                       'lib/icons/manuel.jpg',
                       height: 40,
@@ -97,13 +97,70 @@ class _HomePageState extends State<HomePage> {
                     'Manuel',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 22,
-                      fontWeight: FontWeight.w700,
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ],
               ),
               const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      const Text(
+                        'USD / EUR: ',
+                        style: TextStyle(
+                          color: Color.fromRGBO(187, 204, 204, 0.7),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Image.asset(
+                        'lib/icons/down-arrow.png',
+                        height: 12,
+                        color: const Color.fromRGBO(187, 204, 204, 1),
+                      ),
+                      const Text(
+                        '0.9028',
+                        style: TextStyle(
+                          color: Color.fromRGBO(187, 204, 204, 1),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      const Text(
+                        'BTC / USD: ',
+                        style: TextStyle(
+                          color: Color.fromRGBO(187, 204, 204, 0.7),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Image.asset(
+                        'lib/icons/up-arrow.png',
+                        height: 12,
+                        color: const Color.fromRGBO(187, 204, 204, 1),
+                      ),
+                      const Text(
+                        '0.9028',
+                        style: TextStyle(
+                          color: Color.fromRGBO(187, 204, 204, 1),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(height: 25),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-//import 'package:flutter_stock_wallet/pages/sign_in.dart';
+import 'package:flutter_stock_wallet/pages/sign_in.dart';
 import 'package:flutter_stock_wallet/pages/home_page.dart';
 
 void main() async {

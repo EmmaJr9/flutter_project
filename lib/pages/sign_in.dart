@@ -64,7 +64,7 @@ class _SignInState extends State<SignIn> {
                     ),
                   ),
                   Image.asset(
-                    'lib/icons/welcome.jpg',
+                    'lib/icons/welcome.png',
                     height: 70,
                     //width: 70,
                   ),
