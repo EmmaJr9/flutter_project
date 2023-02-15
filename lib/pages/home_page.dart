@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 25.0),
+                padding: const EdgeInsets.only(top: 10.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -73,7 +73,70 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              //
+              const SizedBox(height: 20),
+              Row(
+                children: [
+                  const Text(
+                    'Hello',
+                    style: TextStyle(
+                      color: Color.fromRGBO(77, 117, 117, 100),
+                      fontSize: 22,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(width: 7),
+                  ClipRRect(
+                    borderRadius: BorderRadiusDirectional.circular(20),
+                    child: Image.asset(
+                      'lib/icons/manuel.jpg',
+                      height: 40,
+                    ),
+                  ),
+                  const SizedBox(width: 7),
+                  const Text(
+                    'Manuel',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text('Wallet'),
+                  Row(
+                    children: const [],
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [],
+                  ),
+                  Row(
+                    children: [],
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [],
+                  ),
+                  Row(
+                    children: [],
+                  ),
+                ],
+              ),
             ],
           ),
         ),
