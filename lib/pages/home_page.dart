@@ -85,12 +85,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   const SizedBox(width: 7),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.asset(
-                      'lib/icons/avatar/avatar-1.png',
-                      height: 40,
-                    ),
+                  Image.asset(
+                    'lib/icons/avatar/avatar-3.png',
+                    height: 45,
                   ),
                   const SizedBox(width: 7),
                   const Text(
@@ -103,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              const SizedBox(height: 12),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -176,7 +173,46 @@ class _HomePageState extends State<HomePage> {
                   ),
                   const SizedBox(height: 15),
                   Row(
-                    children: const [],
+                    children: [
+                      SizedBox(
+                        height: 70,
+                        width: 140,
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            color: Color.fromRGBO(43, 103, 102, 1),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: const [],
+                                ),
+                                const SizedBox(height: 10),
+                                const Text(
+                                  'Mastercard',
+                                  style: TextStyle(
+                                    color: Color.fromRGBO(79, 131, 129, 1),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                const Text(
+                                  '\$1600.32',
+                                  style: TextStyle(
+                                    color: Color.fromRGBO(153, 179, 180, 1),
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -185,7 +221,25 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    children: [],
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text(
+                        'Transfer to',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        'See all',
+                        style: TextStyle(
+                          color: Color.fromRGBO(187, 204, 204, 1),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
                   ),
                   Row(
                     children: [],
@@ -197,7 +251,25 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    children: [],
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text(
+                        'Goals',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        'See all',
+                        style: TextStyle(
+                          color: Color.fromRGBO(187, 204, 204, 1),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
                   ),
                   Row(
                     children: [],
