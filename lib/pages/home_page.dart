@@ -175,11 +175,17 @@ class _HomePageState extends State<HomePage> {
                   Row(
                     children: [
                       SizedBox(
-                        height: 110,
-                        width: 140,
+                        height: 120,
+                        width: 190,
                         child: Container(
-                          decoration: const BoxDecoration(
-                            color: Color.fromRGBO(43, 103, 102, 1),
+                          decoration: BoxDecoration(
+                            color: const Color.fromRGBO(43, 103, 102, 1),
+                            border: Border.all(
+                              color: const Color.fromRGBO(187, 204, 204, 1),
+                              width: 2.0,
+                              style: BorderStyle.solid,
+                            ),
+                            borderRadius: BorderRadius.circular(5),
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -188,11 +194,23 @@ class _HomePageState extends State<HomePage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Image.asset(
-                                      'lib/icons/overlap.png',
-                                      height: 30,
-                                    )
+                                      'lib/icons/visa.png',
+                                      height: 45,
+                                      color: const Color.fromRGBO(
+                                          187, 204, 204, 1),
+                                    ),
+                                    const Text(
+                                      '*****5300',
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(79, 131, 129, 1),
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w500),
+                                    ),
                                   ],
                                 ),
                                 const SizedBox(height: 10),
