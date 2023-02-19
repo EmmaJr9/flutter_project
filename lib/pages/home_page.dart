@@ -175,7 +175,7 @@ class _HomePageState extends State<HomePage> {
                   Row(
                     children: [
                       SizedBox(
-                        height: 70,
+                        height: 110,
                         width: 140,
                         child: Container(
                           decoration: const BoxDecoration(
@@ -188,7 +188,12 @@ class _HomePageState extends State<HomePage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Row(
-                                  children: const [],
+                                  children: [
+                                    Image.asset(
+                                      'lib/icons/overlap.png',
+                                      height: 30,
+                                    )
+                                  ],
                                 ),
                                 const SizedBox(height: 10),
                                 const Text(
@@ -202,7 +207,7 @@ class _HomePageState extends State<HomePage> {
                                 const Text(
                                   '\$1600.32',
                                   style: TextStyle(
-                                    color: Color.fromRGBO(153, 179, 180, 1),
+                                    color: Colors.white,
                                     fontSize: 18,
                                     fontWeight: FontWeight.w700,
                                   ),
