@@ -4,7 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stock_wallet/pages/sign_in.dart';
 import 'package:flutter_stock_wallet/pages/home_page.dart';
-//import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -19,9 +19,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          //textTheme: GoogleFonts.lato(),
-          //unselectedWidgetColor: const Color.fromARGB(255, 3, 109, 201),
-          ),
+        textTheme: GoogleFonts.latoTextTheme(),
+        //unselectedWidgetColor: const Color.fromARGB(255, 3, 109, 201),
+      ),
       home: const LoadPage(),
     );
   }
