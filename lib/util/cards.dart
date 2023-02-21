@@ -61,6 +61,7 @@ class TransactionCard extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
+              const SizedBox(height: 3),
               Text(
                 '\$$balance',
                 style: const TextStyle(
