@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(
                           color: Color.fromRGBO(187, 204, 204, 0.7),
                           fontSize: 12,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                       Image.asset(
@@ -127,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(
                           color: Color.fromRGBO(187, 204, 204, 1),
                           fontSize: 12,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ],
@@ -139,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(
                           color: Color.fromRGBO(187, 204, 204, 0.7),
                           fontSize: 12,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                       Image.asset(
@@ -153,7 +153,7 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(
                           color: Color.fromRGBO(187, 204, 204, 1),
                           fontSize: 12,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ],
@@ -175,43 +175,46 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               const SizedBox(height: 15),
-              Row(
-                children: const [
-                  TransactionCard(
-                    cardType: 'Visa',
-                    cardImagePath: 'lib/icons/visa.png',
-                    cardNumber: 123456789,
-                    balance: 1600.32,
-                  ),
-                  SizedBox(width: 20),
-                  TransactionCard(
-                    cardType: 'Visa',
-                    cardImagePath: 'lib/icons/visa.png',
-                    cardNumber: 123456789,
-                    balance: 1600.32,
-                  ),
-                  SizedBox(width: 20),
-                  TransactionCard(
-                    cardType: 'Visa',
-                    cardImagePath: 'lib/icons/visa.png',
-                    cardNumber: 123456789,
-                    balance: 1600.32,
-                  ),
-                  SizedBox(width: 20),
-                  TransactionCard(
-                    cardType: 'Visa',
-                    cardImagePath: 'lib/icons/visa.png',
-                    cardNumber: 123456789,
-                    balance: 1600.32,
-                  ),
-                  SizedBox(width: 20),
-                  TransactionCard(
-                    cardType: 'Visa',
-                    cardImagePath: 'lib/icons/visa.png',
-                    cardNumber: 123456789,
-                    balance: 1600.32,
-                  ),
-                ],
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: const [
+                    TransactionCard(
+                      cardType: 'Visa',
+                      cardImagePath: 'lib/icons/visa.png',
+                      cardNumber: 123456789,
+                      balance: 1600.32,
+                    ),
+                    SizedBox(width: 20),
+                    TransactionCard(
+                      cardType: 'Visa',
+                      cardImagePath: 'lib/icons/visa.png',
+                      cardNumber: 123456789,
+                      balance: 1600.32,
+                    ),
+                    SizedBox(width: 20),
+                    TransactionCard(
+                      cardType: 'Visa',
+                      cardImagePath: 'lib/icons/visa.png',
+                      cardNumber: 123456789,
+                      balance: 1600.32,
+                    ),
+                    SizedBox(width: 20),
+                    TransactionCard(
+                      cardType: 'Visa',
+                      cardImagePath: 'lib/icons/visa.png',
+                      cardNumber: 123456789,
+                      balance: 1600.32,
+                    ),
+                    SizedBox(width: 20),
+                    TransactionCard(
+                      cardType: 'Visa',
+                      cardImagePath: 'lib/icons/visa.png',
+                      cardNumber: 123456789,
+                      balance: 1600.32,
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 15),
               SizedBox(
@@ -236,7 +239,7 @@ class _HomePageState extends State<HomePage> {
                         const Text(
                           "Total spent in April",
                           style: TextStyle(
-                            color: Color.fromRGBO(79, 131, 129, 1),
+                            color: Color.fromRGBO(187, 204, 204, 0.7),
                             fontSize: 14,
                             fontWeight: FontWeight.w700,
                           ),
@@ -317,7 +320,7 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(
                           color: Color.fromRGBO(187, 204, 204, 1),
                           fontSize: 14,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ],
@@ -347,7 +350,7 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(
                           color: Color.fromRGBO(187, 204, 204, 1),
                           fontSize: 14,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ],

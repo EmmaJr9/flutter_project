@@ -46,7 +46,7 @@ class TransactionCard extends StatelessWidget {
                   Text(
                     "$cardNumber",
                     style: const TextStyle(
-                        color: Color.fromRGBO(79, 131, 129, 1),
+                        color: Color.fromRGBO(187, 204, 204, 0.7),
                         fontSize: 12,
                         fontWeight: FontWeight.w700),
                   ),
@@ -56,7 +56,7 @@ class TransactionCard extends StatelessWidget {
               Text(
                 cardType,
                 style: const TextStyle(
-                  color: Color.fromRGBO(79, 131, 129, 1),
+                  color: Color.fromRGBO(187, 204, 204, 0.7),
                   fontSize: 12,
                   fontWeight: FontWeight.w700,
                 ),
