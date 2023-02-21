@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stock_wallet/util/cards.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -160,10 +161,10 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               const SizedBox(height: 25),
-              Column(
+              Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
+                children: const [
+                  Text(
                     'Wallet',
                     style: TextStyle(
                       color: Colors.white,
@@ -171,73 +172,130 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  const SizedBox(height: 15),
-                  Row(
-                    children: [
-                      SizedBox(
-                        height: 120,
-                        width: 190,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color.fromRGBO(43, 103, 102, 1),
-                            border: Border.all(
-                              color: const Color.fromRGBO(187, 204, 204, 1),
-                              width: 2.0,
-                              style: BorderStyle.solid,
-                            ),
-                            borderRadius: BorderRadius.circular(5),
+                ],
+              ),
+              const SizedBox(height: 15),
+              Row(
+                children: const [
+                  TransactionCard(
+                    cardType: 'Visa',
+                    cardImagePath: 'lib/icons/visa.png',
+                    cardNumber: 123456789,
+                    balance: 1600.32,
+                  ),
+                  SizedBox(width: 20),
+                  TransactionCard(
+                    cardType: 'Visa',
+                    cardImagePath: 'lib/icons/visa.png',
+                    cardNumber: 123456789,
+                    balance: 1600.32,
+                  ),
+                  SizedBox(width: 20),
+                  TransactionCard(
+                    cardType: 'Visa',
+                    cardImagePath: 'lib/icons/visa.png',
+                    cardNumber: 123456789,
+                    balance: 1600.32,
+                  ),
+                  SizedBox(width: 20),
+                  TransactionCard(
+                    cardType: 'Visa',
+                    cardImagePath: 'lib/icons/visa.png',
+                    cardNumber: 123456789,
+                    balance: 1600.32,
+                  ),
+                  SizedBox(width: 20),
+                  TransactionCard(
+                    cardType: 'Visa',
+                    cardImagePath: 'lib/icons/visa.png',
+                    cardNumber: 123456789,
+                    balance: 1600.32,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 15),
+              SizedBox(
+                height: 80,
+                width: double.infinity,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: const Color.fromRGBO(43, 103, 102, 1),
+                    border: Border.all(
+                      color: const Color.fromRGBO(187, 204, 204, 1),
+                      width: 2.0,
+                      style: BorderStyle.solid,
+                    ),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "Total spent in April",
+                          style: TextStyle(
+                            color: Color.fromRGBO(79, 131, 129, 1),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700,
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                        ),
+                        const SizedBox(height: 3),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const Text(
+                              "\$841.90",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            const SizedBox(width: 20),
+                            SizedBox(
+                              height: 25,
+                              width: 60,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color:
+                                      const Color.fromRGBO(187, 204, 204, 0.3),
+                                  border: Border.all(
+                                    color: const Color.fromRGBO(
+                                        187, 204, 204, 0.3),
+                                    style: BorderStyle.solid,
+                                  ),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Row(
                                   children: [
+                                    const SizedBox(width: 7),
                                     Image.asset(
-                                      'lib/icons/visa.png',
-                                      height: 45,
-                                      color: const Color.fromRGBO(
-                                          187, 204, 204, 1),
+                                      'lib/icons/down-arrow.png',
+                                      height: 12,
+                                      color: Colors.white,
                                     ),
+                                    const SizedBox(width: 5),
                                     const Text(
-                                      '*****5300',
+                                      "13%",
                                       style: TextStyle(
-                                          color:
-                                              Color.fromRGBO(79, 131, 129, 1),
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w500),
+                                        color: Colors.white,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w700,
+                                      ),
                                     ),
                                   ],
                                 ),
-                                const SizedBox(height: 10),
-                                const Text(
-                                  'Mastercard',
-                                  style: TextStyle(
-                                    color: Color.fromRGBO(79, 131, 129, 1),
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                const Text(
-                                  '\$1600.32',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                              ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                      ),
-                    ],
+                        const SizedBox(height: 10),
+                      ],
+                    ),
                   ),
-                ],
+                ),
               ),
               const SizedBox(height: 30),
               Column(
