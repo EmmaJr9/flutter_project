@@ -178,6 +178,8 @@ class _HomePageState extends State<HomePage> {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     TransactionCard(
                       cardType: 'Visa',
@@ -325,8 +327,97 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ),
-                  Row(
-                    children: [],
+                  const SizedBox(height: 15),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          height: 50,
+                          width: 50,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: const Color.fromRGBO(43, 103, 102, 1),
+                              border: Border.all(
+                                color: const Color.fromRGBO(187, 204, 204, 1),
+                                style: BorderStyle.solid,
+                              ),
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: const Icon(
+                              Icons.add,
+                              size: 25,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'lib/icons/avatar/avatar-1.png',
+                          height: 50,
+                        ),
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'lib/icons/avatar/avatar-2.png',
+                          height: 50,
+                        ),
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'lib/icons/avatar/avatar-4.png',
+                          height: 50,
+                        ),
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'lib/icons/avatar/avatar-5.png',
+                          height: 50,
+                        ),
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'lib/icons/avatar/avatar-6.png',
+                          height: 50,
+                        ),
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'lib/icons/avatar/avatar-7.png',
+                          height: 50,
+                        ),
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'lib/icons/avatar/avatar-8.png',
+                          height: 50,
+                        ),
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'lib/icons/avatar/avatar-9.png',
+                          height: 50,
+                        ),
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'lib/icons/avatar/avatar-10.png',
+                          height: 50,
+                        ),
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'lib/icons/avatar/avatar-11.png',
+                          height: 50,
+                        ),
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'lib/icons/avatar/avatar-12.png',
+                          height: 50,
+                        ),
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'lib/icons/avatar/avatar-13.png',
+                          height: 50,
+                        ),
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'lib/icons/avatar/avatar-14.png',
+                          height: 50,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
