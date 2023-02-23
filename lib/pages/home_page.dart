@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stock_wallet/util/cards.dart';
+import 'package:flutter_stock_wallet/util/add_contact.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -332,90 +333,91 @@ class _HomePageState extends State<HomePage> {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        SizedBox(
-                          height: 50,
-                          width: 50,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: const Color.fromRGBO(43, 103, 102, 1),
-                              border: Border.all(
-                                color: const Color.fromRGBO(187, 204, 204, 1),
-                                style: BorderStyle.solid,
+                        Column(
+                          children: [
+                            SizedBox(
+                              height: 50,
+                              width: 50,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: const Color.fromRGBO(43, 103, 102, 1),
+                                  border: Border.all(
+                                    color:
+                                        const Color.fromRGBO(187, 204, 204, 1),
+                                    style: BorderStyle.solid,
+                                  ),
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                                child: const Icon(
+                                  Icons.add,
+                                  size: 25,
+                                  color: Colors.white,
+                                ),
                               ),
-                              borderRadius: BorderRadius.circular(50),
                             ),
-                            child: const Icon(
-                              Icons.add,
-                              size: 25,
-                              color: Colors.white,
+                            const SizedBox(height: 5),
+                            const Text(
+                              'Select',
+                              style: TextStyle(
+                                color: Color.fromRGBO(187, 204, 204, 0.7),
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
-                          ),
+                          ],
                         ),
                         const SizedBox(width: 10),
-                        Image.asset(
-                          'lib/icons/avatar/avatar-1.png',
-                          height: 50,
-                        ),
+                        const AddContact(
+                            contactImagePath: 'lib/icons/avatar/avatar-1.png',
+                            contactName: 'Jackie'),
                         const SizedBox(width: 10),
-                        Image.asset(
-                          'lib/icons/avatar/avatar-2.png',
-                          height: 50,
-                        ),
+                        const AddContact(
+                            contactImagePath: 'lib/icons/avatar/avatar-2.png',
+                            contactName: 'Michael'),
                         const SizedBox(width: 10),
-                        Image.asset(
-                          'lib/icons/avatar/avatar-4.png',
-                          height: 50,
-                        ),
+                        const AddContact(
+                            contactImagePath: 'lib/icons/avatar/avatar-4.png',
+                            contactName: 'Martha'),
                         const SizedBox(width: 10),
-                        Image.asset(
-                          'lib/icons/avatar/avatar-5.png',
-                          height: 50,
-                        ),
+                        const AddContact(
+                            contactImagePath: 'lib/icons/avatar/avatar-5.png',
+                            contactName: 'Andy'),
                         const SizedBox(width: 10),
-                        Image.asset(
-                          'lib/icons/avatar/avatar-6.png',
-                          height: 50,
-                        ),
+                        const AddContact(
+                            contactImagePath: 'lib/icons/avatar/avatar-6.png',
+                            contactName: 'Bob'),
                         const SizedBox(width: 10),
-                        Image.asset(
-                          'lib/icons/avatar/avatar-7.png',
-                          height: 50,
-                        ),
+                        const AddContact(
+                            contactImagePath: 'lib/icons/avatar/avatar-7.png',
+                            contactName: 'Cudjoe'),
                         const SizedBox(width: 10),
-                        Image.asset(
-                          'lib/icons/avatar/avatar-8.png',
-                          height: 50,
-                        ),
+                        const AddContact(
+                            contactImagePath: 'lib/icons/avatar/avatar-8.png',
+                            contactName: 'Daniella'),
                         const SizedBox(width: 10),
-                        Image.asset(
-                          'lib/icons/avatar/avatar-9.png',
-                          height: 50,
-                        ),
+                        const AddContact(
+                            contactImagePath: 'lib/icons/avatar/avatar-9.png',
+                            contactName: 'Claudia'),
                         const SizedBox(width: 10),
-                        Image.asset(
-                          'lib/icons/avatar/avatar-10.png',
-                          height: 50,
-                        ),
+                        const AddContact(
+                            contactImagePath: 'lib/icons/avatar/avatar-10.png',
+                            contactName: 'Philip'),
                         const SizedBox(width: 10),
-                        Image.asset(
-                          'lib/icons/avatar/avatar-11.png',
-                          height: 50,
-                        ),
+                        const AddContact(
+                            contactImagePath: 'lib/icons/avatar/avatar-11.png',
+                            contactName: 'Elyasu'),
                         const SizedBox(width: 10),
-                        Image.asset(
-                          'lib/icons/avatar/avatar-12.png',
-                          height: 50,
-                        ),
+                        const AddContact(
+                            contactImagePath: 'lib/icons/avatar/avatar-12.png',
+                            contactName: 'Richie'),
                         const SizedBox(width: 10),
-                        Image.asset(
-                          'lib/icons/avatar/avatar-13.png',
-                          height: 50,
-                        ),
+                        const AddContact(
+                            contactImagePath: 'lib/icons/avatar/avatar-13.png',
+                            contactName: 'Ella'),
                         const SizedBox(width: 10),
-                        Image.asset(
-                          'lib/icons/avatar/avatar-14.png',
-                          height: 50,
-                        ),
+                        const AddContact(
+                            contactImagePath: 'lib/icons/avatar/avatar-14.png',
+                            contactName: 'Priscilla'),
                       ],
                     ),
                   ),
