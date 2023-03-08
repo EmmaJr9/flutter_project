@@ -222,7 +222,7 @@ class _SignInState extends State<SignIn> {
                       email: emailController.text.trim(),
                       password: passwordController.text.trim(),
                     );
-                    print(user);
+                    //print(user);
                     if (user != null) {
                       // ignore: use_build_context_synchronously
                       Navigator.of(context).pushReplacement(MaterialPageRoute(

@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stock_wallet/pages/sign_in.dart';
 
@@ -9,8 +10,38 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  // Sign up function
+  static Future<User?> signUpWithEmailAndPassword({
+    required String name,
+    required String email,
+    required String password,
+    required String confirmPassword,
+  }) async {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    User? user;
+    try {
+      UserCredential userCredential = await auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      user = userCredential.user;
+    } on FirebaseAuthException catch (e) {
+      print(e);
+      if (e.code == "user not found") {
+        print("No user found for that email");
+      }
+    }
+    return user;
+  }
+
   @override
   Widget build(BuildContext context) {
+    // create the textfield controller
+    TextEditingController emailController = TextEditingController();
+    TextEditingController passwordController = TextEditingController();
+    TextEditingController userNameController = TextEditingController();
+    TextEditingController confirmPasswordController = TextEditingController();
+
     return Material(
       child: Container(
         decoration: const BoxDecoration(
@@ -45,21 +76,23 @@ class _SignUpState extends State<SignUp> {
               SizedBox(
                 width: double.infinity,
                 child: Column(
-                  children: const [
+                  children: [
                     TextField(
+                      controller: userNameController,
                       keyboardType: TextInputType.text,
-                      decoration: InputDecoration(
-                        hintText: 'Name',
+                      decoration: const InputDecoration(
+                        hintText: 'UserName',
                         prefixIcon: Icon(
                           Icons.person_rounded,
                           color: Colors.black,
                         ),
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     TextField(
+                      controller: emailController,
                       keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: 'Email',
                         prefixIcon: Icon(
                           Icons.mail,
@@ -67,10 +100,11 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     TextField(
+                      controller: passwordController,
                       obscureText: true,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: 'Password',
                         prefixIcon: Icon(
                           Icons.lock,
@@ -78,10 +112,11 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     TextField(
+                      controller: confirmPasswordController,
                       obscureText: true,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: 'Confirm Password',
                         prefixIcon: Icon(
                           Icons.security,
@@ -97,12 +132,22 @@ class _SignUpState extends State<SignUp> {
                 height: 35,
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: (() {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SignIn()),
-                    );
-                  }),
+                  onPressed: () async {
+                    User? user = await signUpWithEmailAndPassword(
+                        name: userNameController.text.trim(),
+                        email: emailController.text.trim(),
+                        password: passwordController.text.trim(),
+                        confirmPassword: confirmPasswordController.text.trim());
+                    //print(user);
+                    if (user != null &&
+                        passwordController == confirmPasswordController) {
+                      // ignore: use_build_context_synchronously
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) => const SignIn()));
+                    } else {
+                      print('Password does not match');
+                    }
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 16, 12, 54),
                     shape: RoundedRectangleBorder(
