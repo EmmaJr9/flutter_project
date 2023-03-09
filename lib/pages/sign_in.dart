@@ -26,9 +26,9 @@ class _SignInState extends State<SignIn> {
       );
       user = userCredential.user;
     } on FirebaseAuthException catch (e) {
-      print(e);
+      //print(e);
       if (e.code == "user not found") {
-        print("No user found for that email");
+        //print("No user found for that email");
       }
     }
     return user;

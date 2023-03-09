@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stock_wallet/pages/sign_in.dart';
 
+import '../util/services.dart';
+
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
 
@@ -26,9 +28,9 @@ class _SignUpState extends State<SignUp> {
       );
       user = userCredential.user;
     } on FirebaseAuthException catch (e) {
-      print(e);
+      //print(e);
       if (e.code == "user not found") {
-        print("No user found for that email");
+        //print("No user found for that email");
       }
     }
     return user;
@@ -145,7 +147,7 @@ class _SignUpState extends State<SignUp> {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) => const SignIn()));
                     } else {
-                      print('Password does not match');
+                      //print('Password does not match');
                     }
                   },
                   style: ElevatedButton.styleFrom(
@@ -175,7 +177,9 @@ class _SignUpState extends State<SignUp> {
                 height: 35,
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    AuthService().signInWithGoogle();
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -201,6 +205,43 @@ class _SignUpState extends State<SignUp> {
                     ],
                   ),
                 ),
+              ),
+              const SizedBox(height: 30),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Text(
+                    "Already have an existing account?",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
+                  const SizedBox(width: 5),
+                  MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SignIn()));
+                      },
+                      child: const Text(
+                        'Log in to your existing account',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 3, 109, 201),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          decoration: TextDecoration.none,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

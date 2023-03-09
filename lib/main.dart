@@ -3,9 +3,6 @@ import 'dart:developer';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stock_wallet/pages/sign_in.dart';
-import 'package:flutter_stock_wallet/pages/home_page.dart';
-import 'package:flutter_stock_wallet/pages/sign_up.dart';
-import 'package:flutter_stock_wallet/util/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
