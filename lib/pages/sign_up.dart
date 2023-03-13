@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stock_wallet/pages/sign_in.dart';
 
-import '../util/services.dart';
+import '../services/auth_service.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -144,8 +144,11 @@ class _SignUpState extends State<SignUp> {
                     if (user != null &&
                         passwordController == confirmPasswordController) {
                       // ignore: use_build_context_synchronously
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => const SignIn()));
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (context) => const SignIn(),
+                        ),
+                      );
                     } else {
                       //print('Password does not match');
                     }

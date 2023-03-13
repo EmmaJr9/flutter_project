@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_stock_wallet/util/cards.dart';
+import 'package:flutter_stock_wallet/models/contact_card_model.dart';
 import 'package:flutter_stock_wallet/util/add_contact.dart';
+import 'package:flutter_stock_wallet/util/cards.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,6 +15,53 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final contactCardList = [
+      const ContactCardModel(
+        name: 'Jackie',
+        image: 'lib/icons/avatar/avatar-1.png',
+      ),
+      const ContactCardModel(
+        name: 'Jackie',
+        image: 'lib/icons/avatar/avatar-1.png',
+      ),
+      const ContactCardModel(
+        name: 'Jackie',
+        image: 'lib/icons/avatar/avatar-1.png',
+      ),
+      const ContactCardModel(
+        name: 'Jackie',
+        image: 'lib/icons/avatar/avatar-1.png',
+      ),
+      const ContactCardModel(
+        name: 'Jackie',
+        image: 'lib/icons/avatar/avatar-1.png',
+      ),
+      const ContactCardModel(
+        name: 'Jackie',
+        image: 'lib/icons/avatar/avatar-1.png',
+      ),
+      const ContactCardModel(
+        name: 'Jackie',
+        image: 'lib/icons/avatar/avatar-1.png',
+      ),
+      const ContactCardModel(
+        name: 'Jackie',
+        image: 'lib/icons/avatar/avatar-1.png',
+      ),
+      const ContactCardModel(
+        name: 'Jackie',
+        image: 'lib/icons/avatar/avatar-1.png',
+      ),
+      const ContactCardModel(
+        name: 'Jackie',
+        image: 'lib/icons/avatar/avatar-1.png',
+      ),
+      const ContactCardModel(
+        name: 'Jackie',
+        image: 'lib/icons/avatar/avatar-1.png',
+      ),
+    ];
+
     return Scaffold(
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -370,62 +418,83 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                           const SizedBox(width: 10),
-                          const AddContact(
-                              contactImagePath: 'lib/icons/avatar/avatar-1.png',
-                              contactName: 'Jackie'),
-                          const SizedBox(width: 10),
-                          const AddContact(
-                              contactImagePath: 'lib/icons/avatar/avatar-2.png',
-                              contactName: 'Michael'),
-                          const SizedBox(width: 10),
-                          const AddContact(
-                              contactImagePath: 'lib/icons/avatar/avatar-4.png',
-                              contactName: 'Martha'),
-                          const SizedBox(width: 10),
-                          const AddContact(
-                              contactImagePath: 'lib/icons/avatar/avatar-5.png',
-                              contactName: 'Andy'),
-                          const SizedBox(width: 10),
-                          const AddContact(
-                              contactImagePath: 'lib/icons/avatar/avatar-6.png',
-                              contactName: 'Bob'),
-                          const SizedBox(width: 10),
-                          const AddContact(
-                              contactImagePath: 'lib/icons/avatar/avatar-7.png',
-                              contactName: 'Cudjoe'),
-                          const SizedBox(width: 10),
-                          const AddContact(
-                              contactImagePath: 'lib/icons/avatar/avatar-8.png',
-                              contactName: 'Daniella'),
-                          const SizedBox(width: 10),
-                          const AddContact(
-                              contactImagePath: 'lib/icons/avatar/avatar-9.png',
-                              contactName: 'Claudia'),
-                          const SizedBox(width: 10),
-                          const AddContact(
-                              contactImagePath:
-                                  'lib/icons/avatar/avatar-10.png',
-                              contactName: 'Philip'),
-                          const SizedBox(width: 10),
-                          const AddContact(
-                              contactImagePath:
-                                  'lib/icons/avatar/avatar-11.png',
-                              contactName: 'Elyasu'),
-                          const SizedBox(width: 10),
-                          const AddContact(
-                              contactImagePath:
-                                  'lib/icons/avatar/avatar-12.png',
-                              contactName: 'Richie'),
-                          const SizedBox(width: 10),
-                          const AddContact(
-                              contactImagePath:
-                                  'lib/icons/avatar/avatar-13.png',
-                              contactName: 'Ella'),
-                          const SizedBox(width: 10),
-                          const AddContact(
-                              contactImagePath:
-                                  'lib/icons/avatar/avatar-14.png',
-                              contactName: 'Priscilla'),
+                          ...List.generate(
+                            contactCardList.length,
+                            (index) {
+                              final data = contactCardList[index];
+                              return Padding(
+                                padding: const EdgeInsets.only(right: 10),
+                                child: AddContact(
+                                  contactImagePath: data.image ?? '',
+                                  contactName: data.name ?? '',
+                                ),
+                              );
+                            },
+                          ),
+                          // const AddContact(
+                          //   contactImagePath: 'lib/icons/avatar/avatar-1.png',
+                          //   contactName: 'Jackie',
+                          // ),
+                          // const SizedBox(width: 10),
+                          // const AddContact(
+                          //   contactImagePath: 'lib/icons/avatar/avatar-2.png',
+                          //   contactName: 'Michael',
+                          // ),
+                          // const SizedBox(width: 10),
+                          // const AddContact(
+                          //   contactImagePath: 'lib/icons/avatar/avatar-4.png',
+                          //   contactName: 'Martha',
+                          // ),
+                          // const SizedBox(width: 10),
+                          // const AddContact(
+                          //   contactImagePath: 'lib/icons/avatar/avatar-5.png',
+                          //   contactName: 'Andy',
+                          // ),
+                          // const SizedBox(width: 10),
+                          // const AddContact(
+                          //   contactImagePath: 'lib/icons/avatar/avatar-6.png',
+                          //   contactName: 'Bob',
+                          // ),
+                          // const SizedBox(width: 10),
+                          // const AddContact(
+                          //   contactImagePath: 'lib/icons/avatar/avatar-7.png',
+                          //   contactName: 'Cudjoe',
+                          // ),
+                          // const SizedBox(width: 10),
+                          // const AddContact(
+                          //   contactImagePath: 'lib/icons/avatar/avatar-8.png',
+                          //   contactName: 'Daniella',
+                          // ),
+                          // const SizedBox(width: 10),
+                          // const AddContact(
+                          //   contactImagePath: 'lib/icons/avatar/avatar-9.png',
+                          //   contactName: 'Claudia',
+                          // ),
+                          // const SizedBox(width: 10),
+                          // const AddContact(
+                          //   contactImagePath: 'lib/icons/avatar/avatar-10.png',
+                          //   contactName: 'Philip',
+                          // ),
+                          // const SizedBox(width: 10),
+                          // const AddContact(
+                          //   contactImagePath: 'lib/icons/avatar/avatar-11.png',
+                          //   contactName: 'Elyasu',
+                          // ),
+                          // const SizedBox(width: 10),
+                          // const AddContact(
+                          //   contactImagePath: 'lib/icons/avatar/avatar-12.png',
+                          //   contactName: 'Richie',
+                          // ),
+                          // const SizedBox(width: 10),
+                          // const AddContact(
+                          //   contactImagePath: 'lib/icons/avatar/avatar-13.png',
+                          //   contactName: 'Ella',
+                          // ),
+                          // const SizedBox(width: 10),
+                          // const AddContact(
+                          //   contactImagePath: 'lib/icons/avatar/avatar-14.png',
+                          //   contactName: 'Priscilla',
+                          // ),
                         ],
                       ),
                     ),
